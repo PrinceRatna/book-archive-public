@@ -21,7 +21,7 @@ displaySearchResult=(resultFoundNumber,docs)=>{
         const div=document.createElement('div');
         div.classList.add('col');
         div.innerHTML=`
-        <div class="card  h-100">
+        <div class="card bg-white h-100">
         <img src="https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><strong>Title:</strong>${doc.title}</h5>
