@@ -22,7 +22,7 @@ displaySearchResult=(resultFoundNumber,docs)=>{
         div.classList.add('col');
         div.innerHTML=`
         <div class="card bg-white h-100">
-        <img src="https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg" class="card-img-top" alt="...">
+        <img src="https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg" class="card-img-top" alt="Image not Available">
         <div class="card-body">
           <h5 class="card-title"><strong>Title:</strong>${doc.title}</h5>
           <strong>Author Name: </strong>${doc.author_name?doc.author_name:'no result found'}<br>
