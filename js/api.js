@@ -6,17 +6,17 @@ clickButton=()=>{
     const url=`https://openlibrary.org/search.json?q=${inputText}`;
     fetch(url)
       .then(res=>res.json())
-      .then(data=>displaySearchResult(data.docs));
+      .then(data=>displaySearchResult(data.numFound,data.docs));
 }
 //-------------display search result--------------
-displaySearchResult=docs=>{
+displaySearchResult=(resultFoundNumber,docs)=>{
    const cardContainer=document.getElementById('card-container');
    cardContainer.textContent='';
    if(docs.length===0){
     document.getElementById('count').innerHTML=`<h4 class='text-center'>No Result Found!!</h4> `;  
    }
    else{
-    document.getElementById('count').innerHTML=`<h4 class='text-center'> ${docs.length} Search Results Founded </h4> `;
+    document.getElementById('count').innerHTML=`<h4 class='text-center'> ${resultFoundNumber}  Results Founded </h4> `;
     docs?.forEach(doc=>{
         const div=document.createElement('div');
         div.classList.add('col');
